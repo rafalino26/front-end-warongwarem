@@ -1,42 +1,414 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.booking-page {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.booking-page .overlap {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  top: 0;
+  left: 0;
+}
+
+.booking-page .rectangle {
+  position: absolute;
+  width: 1440px;
+  height: 424px;
+  top: 600px;
+  left: 0;
+  object-fit: cover;
+}
+
+.booking-page .div {
+  position: absolute;
+  width: 1434px;
+  height: 600px;
+  top: 0;
+  left: 0;
+  background-color: #d9d9d9;
+}
+
+.booking-page .img {
+  position: absolute;
+  width: 520px;
+  height: 600px;
+  top: 0;
+  left: 0;
+}
+
+.booking-page .rectangle-2 {
+  position: absolute;
+  width: 520px;
+  height: 287px;
+  top: 313px;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 9, 1, 0) 0%,
+    rgba(18, 9, 1, 0.3) 20.01%,
+    rgba(18, 9, 1, 0.73) 48.98%,
+    rgb(18, 9, 1) 91.06%
+  );
+}
+
+.booking-page .rectangle-3 {
+  position: absolute;
+  width: 397px;
+  height: 300px;
+  top: 0;
+  left: 520px;
+}
+
+.booking-page .rectangle-4 {
+  position: absolute;
+  width: 397px;
+  height: 85px;
+  top: 215px;
+  left: 520px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 9, 1, 0) 0%,
+    rgba(18, 9, 1, 0.3) 20.01%,
+    rgba(18, 9, 1, 0.73) 48.98%,
+    rgb(18, 9, 1) 91.06%
+  );
+}
+
+.booking-page .rectangle-5 {
+  position: absolute;
+  width: 520px;
+  height: 300px;
+  top: 0;
+  left: 917px;
+  background-color: #120901;
+}
+
+.booking-page .rectangle-6 {
+  position: absolute;
+  width: 397px;
+  height: 300px;
+  top: 300px;
+  left: 520px;
+  background-color: #120901;
+}
+
+.booking-page .rectangle-7 {
+  position: absolute;
+  width: 523px;
+  height: 302px;
+  top: 298px;
+  left: 917px;
+}
+
+.booking-page .text-wrapper {
+  position: absolute;
+  width: 339px;
+  top: 406px;
+  left: 549px;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 47px;
   text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.booking-page .text-wrapper-2 {
+  position: absolute;
+  width: 393px;
+  top: 740px;
+  left: 523px;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 47px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.booking-page .text-wrapper-3 {
+  position: absolute;
+  top: 473px;
+  left: 663px;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-.card {
-  padding: 2em;
+.booking-page .text-wrapper-4 {
+  position: absolute;
+  top: 194px;
+  left: 1111px;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-.read-the-docs {
-  color: #888;
+.booking-page .rectangle-8 {
+  position: absolute;
+  width: 126px;
+  height: 3px;
+  top: 404px;
+  left: 655px;
+  background-color: var(--secondary);
+}
+
+.booking-page .rectangle-9 {
+  position: absolute;
+  width: 126px;
+  height: 3px;
+  top: 725px;
+  left: 657px;
+  background-color: var(--secondary);
+}
+
+.booking-page .rectangle-10 {
+  position: absolute;
+  width: 523px;
+  height: 144px;
+  top: 457px;
+  left: 917px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 9, 1, 0) 0%,
+    rgba(18, 9, 1, 0.3) 20.01%,
+    rgba(18, 9, 1, 0.73) 48.98%,
+    rgb(18, 9, 1) 91.06%
+  );
+}
+
+.booking-page .frame {
+  display: inline-flex;
+  gap: 132px;
+  top: 860px;
+  left: 67px;
+  align-items: center;
+  padding: 10px 15px;
+  position: absolute;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #ffffff;
+}
+
+.booking-page .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffffcc;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.56px;
+  line-height: normal;
+}
+
+.booking-page .draft-arrows {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  transform: rotate(-90deg);
+}
+
+.booking-page .union {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1078px;
+  left: 380px;
+  transform: rotate(90deg);
+}
+
+.booking-page .vector {
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  top: 9px;
+  left: 6px;
+  transform: rotate(90deg);
+}
+
+.booking-page .frame-2 {
+  display: flex;
+  width: 283px;
+  gap: 132px;
+  top: 862px;
+  left: 1095px;
+  align-items: center;
+  padding: 10px 15px;
+  position: absolute;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #ffffff;
+}
+
+.booking-page .TABLE-TYPE {
+  position: relative;
+  width: fit-content;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-weight: 400;
+  color: #ffffffcc;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.56px;
+  line-height: normal;
+}
+
+.booking-page .span {
+  font-weight: 500;
+}
+
+.booking-page .text-wrapper-6 {
+  font-family: "Proza Libre-Medium", Helvetica;
+  font-weight: 500;
+}
+
+.booking-page .union-2 {
+  top: -2123px;
+  left: 382px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  transform: rotate(90deg);
+}
+
+.booking-page .frame-3 {
+  display: inline-flex;
+  gap: 117px;
+  top: 864px;
+  left: 415px;
+  align-items: center;
+  padding: 10px 15px;
+  position: absolute;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #ffffff;
+}
+
+.booking-page .union-3 {
+  top: -1417px;
+  left: 384px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  transform: rotate(90deg);
+}
+
+.booking-page .frame-4 {
+  display: inline-flex;
+  gap: 130px;
+  top: 864px;
+  left: 755px;
+  align-items: center;
+  padding: 10px 15px;
+  position: absolute;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #ffffff;
+}
+
+.booking-page .union-4 {
+  top: -1758px;
+  left: 384px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  transform: rotate(90deg);
+}
+
+.booking-page .group {
+  position: absolute;
+  width: 173px;
+  height: 54px;
+  top: 943px;
+  left: 634px;
+}
+
+.booking-page .overlap-group {
+  position: relative;
+  width: 171px;
+  height: 54px;
+}
+
+.booking-page .rectangle-11 {
+  position: absolute;
+  width: 161px;
+  height: 46px;
+  top: 4px;
+  left: 5px;
+  border: 0.5px solid;
+  border-color: #b52c00;
+  background: linear-gradient(180deg, rgba(170, 52, 13, 0.85) 0%, rgba(170, 52, 13, 0) 100%);
+}
+
+.booking-page .rectangle-12 {
+  position: absolute;
+  width: 171px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  border: 0.5px solid;
+  border-color: #e6b7a8;
+}
+
+.booking-page .book-now {
+  position: absolute;
+  top: 18px;
+  left: 42px;
+  font-family: "Proza Libre-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.booking-page .vuesax-outline-book {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 354px;
+  left: 698px;
+}
+
+.booking-page .text-wrapper-7 {
+  position: absolute;
+  width: 529px;
+  top: 72px;
+  left: 896px;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 47px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.booking-page .rectangle-13 {
+  position: absolute;
+  width: 1440px;
+  height: 103px;
+  top: 1047px;
+  left: 0;
+  background-color: #120901;
+  border: 1px solid;
+  border-color: #ffffff33;
 }
