@@ -3,10 +3,10 @@ import './App.css'
 import LandingPage from './Components/LPcoms'
 import Home from './Pages/Home'
 import Signup from './Pages/Signup'
-import SigninAs from './Pages/SigninAs'
-import SigninAsCustomers from './Pages/signinAsCustomers'
-import SigninAsWaiters from './Pages/signinAsWaiters'
-import SigninAsManagers from './Pages/signinAsManagers'
+import SignIn from './Pages/SignIn'
+import AboutUs from './Pages/AboutUs'
+import ContactUs from './Pages/ContactUs'
+
 
 const App = () => {
    return (
@@ -14,10 +14,9 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Signup' element={<Signup />} />
-        <Route path='/SignInAs' element={<SigninAs/>} />
-        <Route path='/SignInAsCustomers' element={<SigninAsCustomers/>} />
-        <Route path='/SignInAsWaiters' element={<SigninAsWaiters/>} />
-        <Route path='/SignInAsManagers' element={<SigninAsManagers/>} />
+        <Route path='/SignIn' element={<SignIn/>} />
+        <Route path='/AboutUs' element={<AboutUs/>} />
+        <Route path='/ContactUs' element={<ContactUs/>} />
       </Routes>
     </Router>
    )
