@@ -550,6 +550,7 @@ label {
   cursor: pointer;
 }
 .sign-in2 {
+  background-color: transparent;
   top: 7px;
   position: absolute;
   font-size: var(--font-size-base);
