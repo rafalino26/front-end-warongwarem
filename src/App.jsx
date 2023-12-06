@@ -6,6 +6,7 @@ import Signup from './Pages/Signup'
 import SignIn from './Pages/SignIn'
 import AboutUs from './Pages/AboutUs'
 import ContactUs from './Pages/ContactUs'
+import CustComs from './Pages/CustomerDashboard'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/SignIn' element={<SignIn/>} />
         <Route path='/AboutUs' element={<AboutUs/>} />
         <Route path='/ContactUs' element={<ContactUs/>} />
+        <Route path='/CustomerDashboard' element={<CustComs/>} />
       </Routes>
     </Router>
    )

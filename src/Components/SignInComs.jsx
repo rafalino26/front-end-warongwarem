@@ -4,6 +4,24 @@ import { useNavigate } from "react-router-dom";
 export const Signin = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSignIn = () => {
+    // Your sign-in logic goes here
+    if (email && password) {
+      // Perform sign-in actions
+      navigate('/CustomerDashboard');
+    }
+  };
 
   return (
     <div className="signup-page">
@@ -15,7 +33,13 @@ export const Signin = () => {
               <p className="Lets-get-start">Sign In</p>
             </div>
             <div className="sign-in-inner">
-              <input className="frame-input2" placeholder="*required" type="email" />
+              <input
+                className="frame-input2"
+                placeholder="*required"
+                type="email"
+                value={email}
+                onChange={handleEmailChange}
+              />
             </div>
             <b className="email-address2">Email address</b>
             <div className="password-wrapper2">
@@ -26,6 +50,8 @@ export const Signin = () => {
                 className="sign-in-child"
                 placeholder="*required"
                 type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={handlePasswordChange}
               />
               <label>
                 <input
@@ -35,7 +61,11 @@ export const Signin = () => {
                 Show Password
               </label>
             </div>
-            <button className="sign-in-container">
+            <button
+              onClick={handleSignIn}
+              className="sign-in-container"
+              disabled={!email || !password}
+            >
               <b className="sign-in2">sign in</b>
             </button>
             <div className="group-2">
@@ -47,10 +77,10 @@ export const Signin = () => {
                 <button onClick={() => navigate('/Signup')} className="text-wrapper-3">Login</button>
               </div>
               <div>
-              <button onClick={() => navigate('/AboutUs')}className="text-wrapper-4">About Us </button>
+                <button onClick={() => navigate('/AboutUs')} className="text-wrapper-4">About Us</button>
               </div>
               <div>
-              <button onClick={() => navigate('/ContactUs')}className="text-wrapper-5">Contact Us </button>
+                <button onClick={() => navigate('/ContactUs')} className="text-wrapper-5">Contact Us</button>
               </div>
             </div>
           </div>
