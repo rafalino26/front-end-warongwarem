@@ -27,9 +27,6 @@ export const LandingPage = () => {
               <div>
               <button onClick={() => navigate('/AboutUs')}className="text-wrapper-4">About Us </button>
               </div>
-              <div>
-              <button onClick={() => navigate('/ContactUs')}className="text-wrapper-5">Contact Us </button>
-              </div>
             </div>
           </div>
           <div className="EAT-for-LIFE">EAT FOR LIFE</div>
