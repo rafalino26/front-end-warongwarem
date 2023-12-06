@@ -11,6 +11,32 @@
   top: -15px;
 }
 
+.landing-page .text-wrapper-2 {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: -18px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -15px;
+}
+
+.signup-page .text-wrapper-2 {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: -18px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -15px;
+}
+
 .text-wrapper-3 {
   background-color: transparent;
   color: #ffffff;
@@ -38,6 +64,46 @@
   display: block; /* Add this line to make the button a block element */
 }
 
+.landing-page .text-wrapper-4 {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: normal;
+  position: absolute;
+  top: -13px;
+  left: 90px;
+  display: block; /* Add this line to make the button a block element */
+}
+
+.signup-page .text-wrapper-4 {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 90px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -13px;
+}
+
+.cust-page .text-wrapper-4 {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 90px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -13px;
+}
+
 .text-wrapper-5 {
   background-color: transparent;
   color: #ffffff;
@@ -53,6 +119,49 @@
   white-space: nowrap; /* Add this line to prevent text wrapping */
 }
 
+.text-wrapper-6 {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: normal;
+  position: absolute;
+  top: -13px;
+  left: -100px;
+  display: block;
+  white-space: nowrap; /* Add this line to prevent text wrapping */
+}
+
+.text-wrapper-7 {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: normal;
+  position: absolute;
+  top: -13px;
+  left: -1px;
+  display: block; /* Add this line to make the button a block element */
+}
+
+.text-wrapper-8 {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: normal;
+  position: absolute;
+  top: -12px;
+  left: 100px;
+  display: block;
+  white-space: nowrap; /* Add this line to prevent text wrapping */
+}
 
 .landing-page {
   background-color: #000000;
@@ -139,7 +248,7 @@
 
 .landing-page .line {
   height: 1px;
-  left: -96px;
+  left: -5px;
   position: absolute;
   top: 23px;
   width: 66px;
@@ -147,7 +256,7 @@
 
 .landing-page .line3 {
   height: 1px;
-  left: 14px;
+  left: 115px;
   position: absolute;
   top: 23px;
   width: 66px;
@@ -156,6 +265,22 @@
 .landing-page .line4 {
   height: 1px;
   left: 132px;
+  position: absolute;
+  top: 23px;
+  width: 66px;
+}
+
+.landing-page .line5 {
+  height: 1px;
+  left: 16px;
+  position: absolute;
+  top: 23px;
+  width: 66px;
+}
+
+.landing-page .line6 {
+  height: 1px;
+  left: -87px;
   position: absolute;
   top: 23px;
   width: 66px;

@@ -44,16 +44,16 @@ export const ContactUsPage = () => {
             <div className="group-2">
               <div className="overlap-group">
                 <img className="line4" alt="marker.png" src="marker.png" />
-                <button onClick={() => navigate('/')} className="text-wrapper-2">Home</button>
+                <button onClick={() => navigate('/CustomerDashboard')} className="text-wrapper-6">Home</button>
               </div>
               <div>
-              <button onClick={() => navigate('/Signup')}className="text-wrapper-3">Login</button>
+              <button onClick={() => navigate('/')}className="text-wrapper-3">Logout</button>
               </div>
               <div>
-              <button onClick={() => navigate('/AboutUs')}className="text-wrapper-4">About Us </button>
+              <button onClick={() => navigate('/History')}className="text-wrapper-7">History </button>
               </div>
               <div>
-              <button onClick={() => navigate('/Contact Us')}className="text-wrapper-5">Contact Us </button>
+              <button onClick={() => navigate('/Contact Us')}className="text-wrapper-8">Contact Us </button>
               </div>
             </div>
           </div>
