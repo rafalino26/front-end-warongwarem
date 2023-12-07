@@ -129,7 +129,7 @@
   line-height: normal;
   position: absolute;
   top: -13px;
-  left: -100px;
+  left: -120px;
   display: block;
   white-space: nowrap; /* Add this line to prevent text wrapping */
 }
@@ -144,7 +144,7 @@
   line-height: normal;
   position: absolute;
   top: -13px;
-  left: -1px;
+  left: -31px;
   display: block; /* Add this line to make the button a block element */
 }
 
@@ -272,7 +272,7 @@
 
 .landing-page .line5 {
   height: 1px;
-  left: 16px;
+  left:6px;
   position: absolute;
   top: 23px;
   width: 66px;
@@ -280,7 +280,7 @@
 
 .landing-page .line6 {
   height: 1px;
-  left: -87px;
+  left: -106px;
   position: absolute;
   top: 23px;
   width: 66px;

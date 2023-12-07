@@ -25,7 +25,7 @@ export const HistoryPage = () => {
               <button onClick={() => navigate('/')}className="text-wrapper-3">Logout</button>
               </div>
               <div>
-              <button onClick={() => navigate('/History')}className="text-wrapper-7">History </button>
+              <button onClick={() => navigate('/History')}className="text-wrapper-7">Reservation </button>
               </div>
               <div>
               <button onClick={() => navigate('/ContactUs')}className="text-wrapper-8">Contact Us </button>
