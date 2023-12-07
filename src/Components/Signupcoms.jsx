@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export const SignupPage = () => {
   const navigate = useNavigate();
@@ -46,16 +47,29 @@ export const SignupPage = () => {
   };
 
   // fungsi untuk menangani klik tombol sign up
-  const handleSignUp = () => {
+  const handleSignUp = async() => {
     if (!name || !email || !password || !confirmPassword || error) {
       // Tambahkan logika tambahan jika diperlukan untuk menangani form yang tidak valid
       return;
     }
-
-    // Logika untuk melakukan sign up, bisa Anda tambahkan sesuai kebutuhan
-
-    // Navigasi ke halaman sign-in setelah berhasil sign up
-    navigate('/SignIn');
+    
+    try {
+      const response = await axios.post('http://localhost:8000/api/register', {
+        name,
+        email,
+        password,
+        confirmPassword,
+      });
+  
+      // Handle successful signup response here
+      console.log('Signup successful:', response.data);
+      navigate('/SignIn'); // Navigate to the sign-in page after successful signup
+    } catch (error) {
+      // Handle error scenarios
+      console.error('Signup failed:', error.response ? error.response.data : error.message);
+      // Update error state to display appropriate message to the user
+      setError('Signup failed. Please try again.');
+    }
   };
 
   return (

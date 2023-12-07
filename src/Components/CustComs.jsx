@@ -25,14 +25,14 @@ export const CustDashboardPage = () => {
               <button onClick={() => navigate('/')}className="text-wrapper-3">Logout</button>
               </div>
               <div>
-              <button onClick={() => navigate('/History')}className="text-wrapper-7">History</button>
+              <button onClick={() => navigate('/History')}className="text-wrapper-7">Reservation</button>
               </div>
               <div>
               <button onClick={() => navigate('/ContactUs')}className="text-wrapper-8">Contact Us </button>
               </div>
             </div>
           </div>
-          <div className="EAT-for-LIFE">Cusotmer Page</div>
+          <div className="EAT-for-LIFE">Customer Page</div>
         </div>
         <img className="img" alt="glass.jpg" src="glass.jpg" />
       </div>
