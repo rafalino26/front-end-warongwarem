@@ -11,6 +11,9 @@ export const SignupPage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  // new state untuk menyimpan nilai role (default: customer)
+  const [role, setRole] = useState("customer");
+
   // state untuk menyimpan pesan error
   const [error, setError] = useState(null);
 
@@ -63,6 +66,7 @@ export const SignupPage = () => {
         email,
         password,
         confirmPassword,
+        role, // include the user role in the request
       });
 
       // Handle successful signup response here
@@ -135,6 +139,8 @@ export const SignupPage = () => {
               value={confirmPassword}
               onChange={handleConfirmPasswordChange}
             />
+            {/* hidden input field for user role */}
+            <input type="hidden" name="role" value={role} />
             {/* elemen untuk menampilkan pesan error */}
             {error && <div className="error-message">{error}</div>}
             <button
