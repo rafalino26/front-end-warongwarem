@@ -37,8 +37,6 @@ export const ContactUsPage = () => {
               <a href="https://maps.app.goo.gl/j5Nrdp3FzeWAyWdPA" target="_blank" rel="noopener noreferrer">
   Open in Google Maps
 </a>
-
- 
               </p>
             </div>
             <div className="group-2">

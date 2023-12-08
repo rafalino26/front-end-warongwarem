@@ -80,6 +80,10 @@ export const Signin = () => {
                 <button onClick={() => navigate('/AboutUs')} className="text-wrapper-4">About Us</button>
               </div>
             </div>
+            <div className="donthaveaccount">don't have an account?</div>
+            <button onClick={() => navigate('/SignUp')} className="sign-up1" target="_blank">
+              sign up
+            </button>
           </div>
         </div>
         <img className="img" alt="glass.jpg" src="glass.jpg" />
