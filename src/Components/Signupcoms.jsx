@@ -14,6 +14,9 @@ export const SignupPage = () => {
   // state untuk menyimpan pesan error
   const [error, setError] = useState(null);
 
+  // State to manage the success popup
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+
   // fungsi untuk mengubah state ketika input berubah
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -47,29 +50,40 @@ export const SignupPage = () => {
   };
 
   // fungsi untuk menangani klik tombol sign up
-  const handleSignUp = async() => {
+  const handleSignUp = async () => {
     if (!name || !email || !password || !confirmPassword || error) {
       // Tambahkan logika tambahan jika diperlukan untuk menangani form yang tidak valid
       return;
     }
-    
+
     try {
+      // Replace the following line with your actual API integration using axios
       const response = await axios.post('http://localhost:8000/api/register', {
         name,
         email,
         password,
         confirmPassword,
       });
-  
+
       // Handle successful signup response here
       console.log('Signup successful:', response.data);
-      navigate('/SignIn'); // Navigate to the sign-in page after successful signup
+
+      // Show the success popup
+      setShowSuccessPopup(true);
     } catch (error) {
       // Handle error scenarios
       console.error('Signup failed:', error.response ? error.response.data : error.message);
       // Update error state to display appropriate message to the user
       setError('Signup failed. Please try again.');
-    }
+    }
+  };
+
+  // Function to handle OK button click in the success popup
+  const handleOkButtonClick = () => {
+    // Navigate to the verification page
+    navigate('/Verification');
+    // Hide the success popup
+    setShowSuccessPopup(false);
   };
 
   return (
@@ -81,9 +95,9 @@ export const SignupPage = () => {
             <div className="Lets-get-start-wrapper">
               <p className="Lets-get-start">Lets get you started</p>
             </div>
-            <div className="sign-up-inner">
+            <div className="Name-inner">
               <input
-                className="frame-input"
+                className="frame-input-name"
                 placeholder="*required"
                 type="text"
                 value={name}
@@ -91,9 +105,9 @@ export const SignupPage = () => {
               />
             </div>
             <b className="emailaddress1">Email address</b>
-            <div className="Name-inner">
+            <div className="sign-up-inner">
               <input
-                className="frame-input-name"
+                className="frame-input"
                 placeholder="*required"
                 type="email"
                 value={email}
@@ -149,13 +163,21 @@ export const SignupPage = () => {
                 </button>
               </div>
               <div>
-              <button onClick={() => navigate('/AboutUs')}className="text-wrapper-4">About Us </button>
+                <button onClick={() => navigate('/AboutUs')} className="text-wrapper-4">About Us </button>
               </div>
             </div>
           </div>
         </div>
         <img className="img" alt="glass.jpg" src="glass.jpg" />
       </div>
+
+      {/* Success Popup */}
+      {showSuccessPopup && (
+        <div className="success-popup">
+          <p>Your account has been successfully created!</p>
+          <button onClick={handleOkButtonClick}>OK</button>
+        </div>
+      )}
     </div>
   );
 };

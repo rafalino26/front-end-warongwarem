@@ -8,6 +8,8 @@ import AboutUs from './Pages/AboutUs'
 import ContactUs from './Pages/ContactUs'
 import CustComs from './Pages/CustomerDashboard'
 import HistoryPage from './Components/HistoryComs'
+import Verification from './Pages/Verification'
+import History from './Pages/History'
 
 
 const App = () => {
@@ -20,7 +22,8 @@ const App = () => {
         <Route path='/AboutUs' element={<AboutUs/>} />
         <Route path='/ContactUs' element={<ContactUs/>} />
         <Route path='/CustomerDashboard' element={<CustComs/>} />
-        <Route path='/History' element={<HistoryPage/>} />
+        <Route path='/History' element={<History/>} />
+        <Route path='/Verification' element={<Verification/>} />
       </Routes>
     </Router>
    )

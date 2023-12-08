@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export const HistoryPage = () => {
+export const VerificationPage = () => {
   const navigate =  useNavigate()
   return (
     <div className="landing-page">
@@ -18,21 +18,18 @@ export const HistoryPage = () => {
             </div>
             <div className="group-2">
               <div className="overlap-group">
-                <img className="line5" alt="marker.png" src="marker.png" />
-                <button onClick={() => navigate('/CustomerDashboard')} className="text-wrapper-6">Home</button>
+                <img className="line" alt="marker.png" src="marker.png" />
+                <button className="text-wrapper-2">Home</button>
               </div>
               <div>
-              <button onClick={() => navigate('/')}className="text-wrapper-3">Logout</button>
+              <button onClick={() => navigate('/Signup')}className="text-wrapper-3">Login</button>
               </div>
               <div>
-              <button onClick={() => navigate('/History')}className="text-wrapper-7">Reservation </button>
-              </div>
-              <div>
-              <button onClick={() => navigate('/ContactUs')}className="text-wrapper-8">Contact Us </button>
+              <button onClick={() => navigate('/AboutUs')}className="text-wrapper-4">About Us </button>
               </div>
             </div>
           </div>
-          <div className="EAT-for-LIFE">ongoing reservation</div>
+          <div className="EAT-for-LIFE">Verification Page</div>
         </div>
         <img className="img" alt="glass.jpg" src="glass.jpg" />
       </div>
@@ -40,4 +37,4 @@ export const HistoryPage = () => {
   );
 };
 
-export default HistoryPage;
+export default VerificationPage;

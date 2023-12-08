@@ -383,7 +383,7 @@
 .frame-input {
   border: 1px solid var(--sub);
   background-color: transparent;
-  border-radius: var(--br-9xs);
+  border-radius: 10px;
   box-shadow: 0 2px 2px 2px rgb(205, 205, 205);
   box-sizing: border-box;
   width: 545px;
@@ -429,7 +429,7 @@
   border: 1px solid var(--white);
   background-color: transparent;
   top: 540px;
-  border-radius: var(--br-9xs);
+  border-radius: 10px;
   box-shadow: 0 2px 2px 2px rgb(205, 205, 205);
   box-sizing: border-box;
   width: 546px;
@@ -461,7 +461,7 @@
   border: 1px solid var(--white);
   background-color: transparent;
   top: 690px;
-  border-radius: var(--br-9xs);
+  border-radius: 10px;
   box-shadow: 0 2px 2px 2px rgb(205, 205, 205);
   box-sizing: border-box;
   width: 546px;
@@ -492,11 +492,11 @@
   cursor: pointer;
   border: 0;
   padding: var(--padding-8xs) 0;
+  border-radius: 50px;
   background-color:  #ffffff;
   position: absolute;
   top: 800px;
   left: 128px;
-  border-radius: var(--br-9xs);
   width: 400px;
   height: 40px;
   display: flex;
@@ -576,6 +576,7 @@
   border: 1px solid var(--sub);
   background-color: transparent;
   border-radius: var(--br-9xs);
+  border-radius: 10px;
   box-shadow: 0 2px 2px 2px rgb(205, 205, 205);
   box-sizing: border-box;
   width: 545px;
@@ -610,7 +611,7 @@
 .frame-input2 {
   border: 1px solid var(--sub);
   background-color: transparent;
-  border-radius: var(--br-9xs);
+  border-radius: 10px;
   box-shadow: 0 2px 2px 2px rgb(205, 205, 205);
   box-sizing: border-box;
   width: 545px;
@@ -657,7 +658,7 @@
   border: 1px solid var(--white);
   background-color: transparent;
   top: 465px;
-  border-radius: var(--br-9xs);
+  border-radius: 10px;
   box-shadow: 0 2px 2px 2px rgb(205, 205, 205);
   box-sizing: border-box;
   width: 546px;
@@ -692,7 +693,7 @@ label {
   position: absolute;
   top: 597px;
   left: 128px;
-  border-radius: var(--br-9xs);
+  border-radius: 50px;
   width: 400px;
   height: 40px;
   display: flex;
@@ -972,4 +973,239 @@ label {
   position: absolute;
   top: 0;
   width: 572px;
+}
+
+/* Add this CSS to your existing stylesheet or create a new one */
+
+.success-popup {
+  position: fixed;
+  top: 350px;
+  left: 750px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-popup p {
+  margin-bottom: 10px;
+}
+
+.success-popup button {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.success-popup button:hover {
+  background-color: #ff0000;
+}
+
+.Cust-home {
+  color: #ffffff;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 50px;
+  font-weight: 700;
+  left: 40px;
+  letter-spacing: 0;
+  line-height: 120px;
+  position: absolute;
+  top: 160px;
+  width: 532px;
+}
+
+.frame-input,
+.person-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.person-input {
+  background-color: transparent;
+  border-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 195px;
+  height: 40px;
+  justify-content: center;
+  padding: 0 var(--padding-base);
+  padding-left: 10px;
+}
+
+.person-inner {
+  position: absolute;
+  top: 450px;
+  left: 95px;
+  width: 579px;
+  height: 98px;
+  justify-content: flex-start;
+}
+
+.frame-input,
+.date-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.date-input {
+  background-color: transparent;
+  border-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 200px;
+  height: 40px;
+  justify-content: center;
+  padding: 0 var(--padding-base);
+  padding-left: 10px;
+}
+
+.date-inner {
+  position: absolute;
+  top: 450px;
+  left: 450px;
+  width: 579px;
+  height: 98px;
+  justify-content: flex-start;
+}
+
+.frame-input,
+.time-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.time-input {
+  background-color: transparent;
+  border-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 195px;
+  height: 40px;
+  justify-content: center;
+  padding: 0 var(--padding-base);
+  padding-left: 10px;
+}
+
+.time-inner {
+  position: absolute;
+  top: 550px;
+  left: 95px;
+  width: 579px;
+  height: 98px;
+  justify-content: flex-start;
+}
+
+.frame-input,
+.table-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.table-input {
+  background-color: transparent;
+  border-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 200px;
+  height: 40px;
+  justify-content: center;
+  padding: 0 var(--padding-base);
+  padding-left: 10px;
+}
+
+.table-inner {
+  position: absolute;
+  top: 550px;
+  left: 450px;
+  width: 579px;
+  height: 98px;
+  justify-content: flex-start;
+}
+
+.table-input option {
+  background-color: #333; /* Background color */
+  color: #ffffff; /* Text color */
+}
+
+.donthaveaccount {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  left: 150px;
+  letter-spacing: 0;
+  line-height: 120px;
+  position: absolute;
+  bottom: -45px;
+  white-space: nowrap;
+  width: 378px;
+}
+
+
+.sign-up1 {
+  position: absolute;
+}
+.sign-up1 {
+  background-color: transparent;
+  text-decoration: underline;
+  top: 680px;
+  left: 400px;
+  font-size: var(--font-size-base);
+  line-height: 24px;
+  font-weight: 700;
+  color: inherit;
+}
+
+.BOOKNOW {
+  position: absolute;
+}
+.BOOKNOW {
+  background-color: #4d0000;
+  border-color: #ffffff;
+  border-radius: 10px;
+  top: 658px;
+  left: 306px;
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Add this CSS to your existing stylesheet or create a new one */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 9999; /* Ensure the popup is above other elements */
+}
+
+.popup p {
+  margin-bottom: 10px;
+}
+
+.popup button {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup button:hover {
+  background-color: #ff0000;
 }
