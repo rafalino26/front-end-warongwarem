@@ -1248,3 +1248,106 @@ label {
 .popup button:hover {
   background-color: #ff0000;
 }
+
+.your-bookings {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 26px;
+  font-weight: 600;
+  left: 240px;
+  letter-spacing: 0;
+  line-height: 120px;
+  position: absolute;
+  top: 150PX;
+  white-space: nowrap;
+  width: 378px;
+}
+
+.line7 {
+  height: 1px;
+  left:-335px;
+  position: absolute;
+  top: 200px;
+  width: 450px;
+}
+
+.ongoing-name {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  left: -280px;
+  letter-spacing: 0;
+  line-height: 120px;
+  position: absolute;
+  top: 165PX;
+  white-space: nowrap;
+  width: 378px;
+}
+.ongoing-email {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  left: -140px;
+  letter-spacing: 0;
+  line-height: 120px;
+  position: absolute;
+  top: 165PX;
+  white-space: nowrap;
+  width: 378px;
+}
+
+.line8 {
+  height: 1px;
+  left:-335px;
+  position: absolute;
+  top: 250px;
+  width: 450px;
+}
+
+.date-ongoing {
+  margin-top: 280px;
+  margin-left: -300px;
+}
+
+.table-ongoing {
+  margin-top: -20px;
+  margin-left: -300px;
+}
+
+.person-ongoing {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+
+.line9 {
+  height: 1px;
+  left:-335px;
+  position: absolute;
+  top: 400px;
+  width: 450px;
+}
+
+.line10 {
+  height: 1px;
+  left:-335px;
+  position: absolute;
+  top: 450px;
+  width: 450px;
+}
+
+.status-ongoing {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 26px;
+  font-weight: 600;
+  left: -190px;
+  letter-spacing: 0;
+  line-height: 120px;
+  position: absolute;
+  top: 367PX;
+  white-space: nowrap;
+  width: 378px;
+}

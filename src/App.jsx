@@ -7,9 +7,9 @@ import SignIn from './Pages/SignIn'
 import AboutUs from './Pages/AboutUs'
 import ContactUs from './Pages/ContactUs'
 import CustComs from './Pages/CustomerDashboard'
-import HistoryPage from './Components/HistoryComs'
 import Verification from './Pages/Verification'
 import History from './Pages/History'
+import SignupMW from './Pages/SignupMW'
 
 
 const App = () => {
@@ -24,6 +24,7 @@ const App = () => {
         <Route path='/CustomerDashboard' element={<CustComs/>} />
         <Route path='/History' element={<History/>} />
         <Route path='/Verification' element={<Verification/>} />
+        <Route path='/SignupMW' element={<SignupMW/>} />
       </Routes>
     </Router>
    )
