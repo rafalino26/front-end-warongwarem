@@ -8,17 +8,27 @@ export const HistoryPage = () => {
       <div className="div">
         <div className="overlap">
           <div className="text-wrapper">WARONGWAREM</div>
+          <div className="your-bookings">YOUR BOOKINGS</div>
           <div className="group">
-            <div className="welcome-where-we-wrapper">
-              <p className="welcome-where-we">
-                WELCOME, WHERE WE BELIEVE THAT FOOD IS MORE THAN JUST SUSTENANCE - IT&#39;S AN EXPERIENCE. OUR MENU
-                FEATURES A VARIETY OF DISHES THAT ARE EXPERTLY PREPARED WITH FRESH, LOCALLY SOURCED INGREDIENTS AND
-                SERVED IN A WARM AND INVITING ATMOSPHERE.
-              </p>
-            </div>
             <div className="group-2">
               <div className="overlap-group">
                 <img className="line5" alt="marker.png" src="marker.png" />
+                <img className="line7" alt="marker.png" src="marker.png" />
+                <div className="ongoing-name">Names</div>
+                <div className="ongoing-email">galnoelkevin@gmail.com</div>
+                <img className="line8" alt="marker.png" src="marker.png" />
+                <div>
+                <img className="date-ongoing" alt="date.png" src="date.png" />
+                </div>
+                <div>
+                <img className="table-ongoing" alt="table.png" src="table.png" />
+                </div>
+                <div>
+                <img className="person-ongoing" alt="person.png" src="person.png" />
+                </div>
+                <img className="line9" alt="marker.png" src="marker.png" />
+                <div className="status-ongoing">CONFIRMED</div>
+                <img className="line10" alt="marker.png" src="marker.png" />
                 <button onClick={() => navigate('/CustomerDashboard')} className="text-wrapper-6">Home</button>
               </div>
               <div>
@@ -32,7 +42,6 @@ export const HistoryPage = () => {
               </div>
             </div>
           </div>
-          <div className="EAT-for-LIFE">ongoing reservation</div>
         </div>
         <img className="img" alt="glass.jpg" src="glass.jpg" />
       </div>
