@@ -475,9 +475,48 @@
   color: red;
   font-size: 14px;
   margin-top: 750px; 
-  margin-left: 57px;
+  margin-left: 60px;
 }
 
+.error-message1 {
+  color: red;
+  font-size: 14px;
+  margin-top: 596px; 
+  margin-left: 60px;
+}
+
+.error-message2 {
+  color: red;
+  font-size: 14px;
+  margin-top: 600px; 
+  margin-left: 95px;
+}
+
+.error-message3 {
+  color: red;
+  font-size: 14px;
+  margin-top: 490px; 
+  margin-left: 95px;
+}
+
+.full-rent-label {
+  left: 25px; /* Adjust the margin as needed */
+  margin-top: -489px;
+  font-family: "Monserrat-Bold", Helvetica;
+  font-size: 13px;
+}
+
+/* Style the checkbox */
+#fullRent {
+  margin-left: 5px; /* Adjust the margin as needed */
+  vertical-align: middle;
+  margin-top: 9px;
+}
+
+/* Optional: Add styles for the checked state */
+#fullRent:checked {
+  color: #007bff; /* Change the color when checked */
+}
 
 .sign-up2 {
   top: 7px;

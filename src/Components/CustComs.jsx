@@ -6,12 +6,22 @@ const CustDashboardPage = () => {
 
   const [showPopup, setShowPopup] = useState(false);
   const [persons, setPersons] = useState("");
+  const [personsError, setPersonsError] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [tableType, setTableType] = useState("regular");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isFullRent, setIsFullRent] = useState(false); // Added state for FULL RENT checkbox
 
   const handlePersonsChange = (e) => {
-    setPersons(e.target.value);
+    const inputPersons = e.target.value;
+    setPersons(inputPersons);
+
+    if (inputPersons < 1 || inputPersons > 6) {
+      setPersonsError("Please select a number of persons between 1 and 6.");
+    } else {
+      setPersonsError("");
+    }
   };
 
   const handleDateChange = (e) => {
@@ -19,7 +29,20 @@ const CustDashboardPage = () => {
   };
 
   const handleTimeChange = (e) => {
-    setTime(e.target.value);
+    const selectedTime = e.target.value;
+    setTime(selectedTime);
+
+    if (!isTimeInRange(selectedTime)) {
+      setErrorMessage("Please select a time between 18:00 and 23:00.");
+    } else {
+      setErrorMessage("");
+    }
+  };
+
+  const isTimeInRange = (selectedTime) => {
+    const timeParts = selectedTime.split(":");
+    const hours = parseInt(timeParts[0], 10);
+    return hours >= 18 && hours <= 23;
   };
 
   const handleTableTypeChange = (e) => {
@@ -27,15 +50,24 @@ const CustDashboardPage = () => {
   };
 
   const isBookingAllowed = () => {
-    return persons.trim() !== "" && date.trim() !== "" && time.trim() !== "" && tableType.trim() !== "";
+    return (
+      (persons.trim() !== "" && date.trim() !== "" && time.trim() !== "" && tableType.trim() !== "" && personsError === "" && errorMessage === "") ||
+      isFullRent
+    );
   };
+  
 
   const handleBookNowClick = () => {
     if (isBookingAllowed()) {
-      // Add your logic to send booking information to the server if needed
-      showPopupFunction();
+      if (isTimeInRange(time)) {
+        // Add your logic to send booking information to the server if needed
+        showPopupFunction();
+        setErrorMessage("");
+      } else {
+        setErrorMessage("Please select a time between 18:00 and 23:00.");
+      }
     } else {
-      alert("Please fill in all the required fields before booking.");
+      setErrorMessage("Please fill in all the required fields before booking.");
     }
   };
 
@@ -45,6 +77,11 @@ const CustDashboardPage = () => {
 
   const handleOkButtonClick = () => {
     setShowPopup(false);
+    navigate("/History");
+  };
+
+  const handleFullRentChange = (e) => {
+    setIsFullRent(e.target.checked);
   };
 
   return (
@@ -88,12 +125,29 @@ const CustDashboardPage = () => {
             value={persons}
             onChange={handlePersonsChange}
           />
+          <label htmlFor="fullRent" className="full-rent-label">
+            FULL RENT
+          </label>
+          <input
+            type="checkbox"
+            id="fullRent"
+            checked={isFullRent}
+            onChange={handleFullRentChange}
+          />
         </div>
         <div className="date-inner">
           <input className="date-input" placeholder="date" type="date" value={date} onChange={handleDateChange} />
         </div>
         <div className="time-inner">
-          <input className="time-input" placeholder="time" type="time" value={time} onChange={handleTimeChange} />
+          <input
+            className="time-input"
+            placeholder="time"
+            type="time"
+            value={time}
+            onChange={handleTimeChange}
+            min="18:00"
+            max="23:00"
+          />
         </div>
         <div className="table-inner">
           <label htmlFor="tableType" className="table-label">
@@ -113,9 +167,10 @@ const CustDashboardPage = () => {
         <button onClick={handleBookNowClick} className="BOOKNOW" target="_blank" disabled={!isBookingAllowed()}>
           BOOK NOW
         </button>
+        {personsError && <div className="error-message3">{personsError}</div>}
+        {errorMessage && <div className="error-message2">{errorMessage}</div>}
       </div>
 
-      {/* Popup */}
       {showPopup && (
         <div className="popup">
           <p>Your booking is already sent. Please wait until we confirm your booking.</p>
