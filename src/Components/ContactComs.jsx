@@ -60,7 +60,7 @@ export const ContactUsPage = () => {
           <div className="Contact3">Reservation Changes or Cancellations:</div>
           <div className="Contact4">Visit Us:</div>
         </div>
-        <img className="img" alt="glass.jpg" src="glass.jpg" />
+        <img className="img4" alt="page4.jpg" src="page4.jpg" />
       </div>
     </div>
   );

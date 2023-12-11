@@ -86,7 +86,7 @@ export const Signin = () => {
             </button>
           </div>
         </div>
-        <img className="img" alt="glass.jpg" src="glass.jpg" />
+        <img className="img6" alt="page6.jpg" src="page6.jpg" />
       </div>
     </div>
   );

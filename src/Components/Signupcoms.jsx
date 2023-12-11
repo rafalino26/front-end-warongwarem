@@ -171,7 +171,7 @@ export const SignupPage = () => {
           </div>
         </div>
       </div>
-      <img className="img" alt="glass.jpg" src="glass.jpg" />
+      <img className="img5" alt="page5.jpg" src="page5.jpg" />
     </div>
 
     {/* Success Popup */}
