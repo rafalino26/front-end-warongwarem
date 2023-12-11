@@ -114,7 +114,7 @@ const CustDashboardPage = () => {
           </div>
           <div className="Cust-home">It's reservation time!</div>
         </div>
-        <img className="img" alt="glass.jpg" src="glass.jpg" />
+        <img className="img1" alt="page1.jpg" src="page1.jpg" />
         <div className="person-inner">
           <input
             className="person-input"

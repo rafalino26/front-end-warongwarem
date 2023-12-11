@@ -19,16 +19,20 @@ export const HistoryPage = () => {
                 <img className="line8" alt="marker.png" src="marker.png" />
                 <div>
                 <img className="date-ongoing" alt="date.png" src="date.png" />
+                <div className="date-message">dd/mm/yyy</div>
                 </div>
                 <div>
                 <img className="table-ongoing" alt="table.png" src="table.png" />
+                <div className="table-message">regular</div>
                 </div>
                 <div>
                 <img className="person-ongoing" alt="person.png" src="person.png" />
+                <div className="person-message">5 persons</div>
                 </div>
                 <img className="line9" alt="marker.png" src="marker.png" />
-                <div className="status-ongoing">CONFIRMED</div>
+                <div className="ongoing-status">WAITING...</div>
                 <img className="line10" alt="marker.png" src="marker.png" />
+                <div className="status-message">please wait until we confirmed your booking</div>
                 <button onClick={() => navigate('/CustomerDashboard')} className="text-wrapper-6">Home</button>
               </div>
               <div>
@@ -43,7 +47,7 @@ export const HistoryPage = () => {
             </div>
           </div>
         </div>
-        <img className="img" alt="glass.jpg" src="glass.jpg" />
+        <img className="img3" alt="page3.jpg" src="page3.jpg" />
       </div>
     </div>
   );

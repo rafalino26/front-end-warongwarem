@@ -59,7 +59,7 @@ export const AboutUsPage = () => {
           <div className="About3">The Culinary Excellencey</div>
           <div className="About4">Our Vision</div>
         </div>
-        <img className="img" alt="glass.jpg" src="glass.jpg" />
+        <img className="img2" alt="page2.jpg" src="page2.jpg" />
       </div>
     </div>
   );
