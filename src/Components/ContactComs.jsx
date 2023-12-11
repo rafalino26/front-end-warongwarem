@@ -48,7 +48,7 @@ export const ContactUsPage = () => {
               <button onClick={() => navigate('/')}className="text-wrapper-3">Logout</button>
               </div>
               <div>
-              <button onClick={() => navigate('/History')}className="text-wrapper-7">Reservation </button>
+              <button onClick={() => navigate('/Reservation')}className="text-wrapper-7">Reservation </button>
               </div>
               <div>
               <button onClick={() => navigate('/Contact Us')}className="text-wrapper-8">Contact Us </button>

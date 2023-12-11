@@ -8,8 +8,8 @@ import AboutUs from './Pages/AboutUs'
 import ContactUs from './Pages/ContactUs'
 import CustComs from './Pages/CustomerDashboard'
 import Verification from './Pages/Verification'
-import History from './Pages/History'
 import SignupMW from './Pages/SignupMW'
+import Reservation from './Pages/Reservation'
 
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
         <Route path='/AboutUs' element={<AboutUs/>} />
         <Route path='/ContactUs' element={<ContactUs/>} />
         <Route path='/CustomerDashboard' element={<CustComs/>} />
-        <Route path='/History' element={<History/>} />
+        <Route path='/Reservation' element={<Reservation/>} />
         <Route path='/Verification' element={<Verification/>} />
         <Route path='/SignupMW' element={<SignupMW/>} />
       </Routes>
