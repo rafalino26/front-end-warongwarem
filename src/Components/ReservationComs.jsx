@@ -1,8 +1,35 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
-export const HistoryPage = () => {
-  const navigate =  useNavigate()
+const ReservationPage = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [reservationStatus, setReservationStatus] = useState("WAITING");
+  const [bookingData, setBookingData] = useState({
+    persons: "",
+    date: "",
+    time: "",
+    tableType: "",
+    isFullRent: false,
+  });
+
+  useEffect(() => {
+    if (location.state) {
+      setBookingData(location.state);
+    }
+  }, [location.state]);
+
+  const handleConfirmation = () => {
+    // Logic for handling confirmation by waiter
+    setReservationStatus("CONFIRMED");
+  };
+
+  const handleRejection = () => {
+    // Logic for handling rejection by waiter
+    setReservationStatus("REJECTED");
+  };
+
   return (
     <div className="landing-page">
       <div className="div">
@@ -32,7 +59,22 @@ export const HistoryPage = () => {
                 <img className="line9" alt="marker.png" src="marker.png" />
                 <div className="ongoing-status">WAITING...</div>
                 <img className="line10" alt="marker.png" src="marker.png" />
-                <div className="status-message">please wait until we confirmed your booking</div>
+                <div className="ongoing-status">{reservationStatus}</div>
+                {reservationStatus === "WAITING" && (
+                <div className="status-message">
+                 Please wait until we confirm your booking.
+                </div>
+                )}
+                {reservationStatus === "CONFIRMED" && (
+               <div className="status-message">
+               Your booking has been confirmed! We look forward to serving you.
+               </div>
+                )}
+                 {reservationStatus === "REJECTED" && (
+                <div className="status-message">
+                We regret to inform you that your booking has been rejected. Please contact us for further assistance.
+               </div>
+                )}
                 <button onClick={() => navigate('/CustomerDashboard')} className="text-wrapper-6">Home</button>
               </div>
               <div>
@@ -53,4 +95,4 @@ export const HistoryPage = () => {
   );
 };
 
-export default HistoryPage;
+export default ReservationPage;

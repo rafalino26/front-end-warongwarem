@@ -1,3 +1,5 @@
+// CustDashboardPage.jsx
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +13,7 @@ const CustDashboardPage = () => {
   const [time, setTime] = useState("");
   const [tableType, setTableType] = useState("regular");
   const [errorMessage, setErrorMessage] = useState("");
-  const [isFullRent, setIsFullRent] = useState(false); // Added state for FULL RENT checkbox
+  const [isFullRent, setIsFullRent] = useState(false);
 
   const handlePersonsChange = (e) => {
     const inputPersons = e.target.value;
@@ -51,17 +53,20 @@ const CustDashboardPage = () => {
 
   const isBookingAllowed = () => {
     return (
-      (persons.trim() !== "" && date.trim() !== "" && time.trim() !== "" && tableType.trim() !== "" && personsError === "" && errorMessage === "") ||
+      (persons.trim() !== "" &&
+        date.trim() !== "" &&
+        time.trim() !== "" &&
+        tableType.trim() !== "" &&
+        personsError === "" &&
+        errorMessage === "") ||
       isFullRent
     );
   };
-  
 
   const handleBookNowClick = () => {
     if (isBookingAllowed()) {
       if (isTimeInRange(time)) {
-        // Add your logic to send booking information to the server if needed
-        showPopupFunction();
+        setShowPopup(true);
         setErrorMessage("");
       } else {
         setErrorMessage("Please select a time between 18:00 and 23:00.");
@@ -77,7 +82,15 @@ const CustDashboardPage = () => {
 
   const handleOkButtonClick = () => {
     setShowPopup(false);
-    navigate("/History");
+    navigate("/Reservation", {
+      state: {
+        persons,
+        date,
+        time,
+        tableType,
+        isFullRent,
+      },
+    });
   };
 
   const handleFullRentChange = (e) => {
@@ -101,7 +114,7 @@ const CustDashboardPage = () => {
                 </button>
               </div>
               <div>
-                <button onClick={() => navigate("/History")} className="text-wrapper-7">
+                <button onClick={() => navigate("/Reservation")} className="text-wrapper-7">
                   Reservation
                 </button>
               </div>
