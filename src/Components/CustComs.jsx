@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { useSpring, animated } from "react-spring";
 
 const instance = axios.create({
   headers: {
@@ -32,6 +33,12 @@ const CustDashboardPage = () => {
       setPersonsError("");
     }
   };
+
+  const fadeInProps = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 1000 }, // Adjust duration for a longer fade-in (in milliseconds)
+  });
 
   const handleDateChange = (e) => {
     setDate(e.target.value);
@@ -131,7 +138,7 @@ const CustDashboardPage = () => {
   };
 
   return (
-    <div className="landing-page">
+    <animated.div style={fadeInProps} className="landing-page">
       <div className="div">
         <div className="overlap">
           <div className="text-wrapper">WARONGWAREM</div>
@@ -225,7 +232,7 @@ const CustDashboardPage = () => {
           <button onClick={handleOkButtonClick}>OK</button>
         </div>
       )}
-    </div>
+    </animated.div>
   );
 };
 
