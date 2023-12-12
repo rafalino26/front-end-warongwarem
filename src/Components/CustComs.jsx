@@ -2,6 +2,13 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+
+const instance = axios.create({
+  headers: {
+    'X-CSRF-TOKEN': 'your-csrf-token', // Replace with the actual CSRF token
+  },
+});
 
 const CustDashboardPage = () => {
   const navigate = useNavigate();
@@ -32,9 +39,11 @@ const CustDashboardPage = () => {
 
   const handleTimeChange = (e) => {
     const selectedTime = e.target.value;
-    setTime(selectedTime);
+    // Append ':00' to set seconds to '00'
+    const formattedTime = selectedTime + ':00';
+    setTime(formattedTime);
 
-    if (!isTimeInRange(selectedTime)) {
+    if (!isTimeInRange(formattedTime)) {
       setErrorMessage("Please select a time between 18:00 and 23:00.");
     } else {
       setErrorMessage("");
@@ -52,15 +61,18 @@ const CustDashboardPage = () => {
   };
 
   const isBookingAllowed = () => {
-    return (
-      (persons.trim() !== "" &&
+    if (isFullRent) {
+      return date.trim() !== "" && time.trim() !== "" && tableType.trim() !== "" && errorMessage === "";
+    } else {
+      return (
+        persons.trim() !== "" &&
         date.trim() !== "" &&
         time.trim() !== "" &&
         tableType.trim() !== "" &&
         personsError === "" &&
-        errorMessage === "") ||
-      isFullRent
-    );
+        errorMessage === ""
+      );
+    }
   };
 
   const handleBookNowClick = () => {
@@ -76,13 +88,35 @@ const CustDashboardPage = () => {
     }
   };
 
-  const showPopupFunction = () => {
-    setShowPopup(true);
-  };
-
-  const handleOkButtonClick = () => {
+  
+  
+  const handleOkButtonClick = async () => {
     setShowPopup(false);
-    navigate("/Reservation", {
+  
+    try {
+      const response = await instance.post(
+        '/api/reservations',
+        {
+          number_of_people: persons,
+          type: tableType.toLowerCase(),
+          date,
+          time,
+        },
+        {
+          headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+          },
+        }
+      );
+  
+      // Handle the response as needed
+      console.log(response.data);
+    } catch (error) {
+      // Handle errors, show error messages, etc.
+      console.error('Error creating reservation:', error.message);
+    }
+  
+    navigate('/Reservation', {
       state: {
         persons,
         date,
@@ -92,7 +126,6 @@ const CustDashboardPage = () => {
       },
     });
   };
-
   const handleFullRentChange = (e) => {
     setIsFullRent(e.target.checked);
   };
@@ -137,6 +170,7 @@ const CustDashboardPage = () => {
             min="1"
             value={persons}
             onChange={handlePersonsChange}
+            disabled={isFullRent}
           />
           <label htmlFor="fullRent" className="full-rent-label">
             FULL RENT
@@ -171,6 +205,7 @@ const CustDashboardPage = () => {
             id="tableType"
             value={tableType}
             onChange={handleTableTypeChange}
+            disabled={isFullRent}
           >
             <option value="regular">Regular</option>
             <option value="outdoor">Outdoor</option>
