@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
 
 const ReservationPage = () => {
   const navigate = useNavigate();
@@ -19,6 +20,13 @@ const ReservationPage = () => {
       setBookingData(location.state);
     }
   }, [location.state]);
+  
+  const fadeInProps = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 1000 }, // Adjust duration for a longer fade-in (in milliseconds)
+  });
+  
 
   const handleConfirmation = () => {
     // Logic for handling confirmation by waiter
@@ -31,9 +39,9 @@ const ReservationPage = () => {
   };
 
   return (
-    <div className="landing-page">
-      <div className="div">
-        <div className="overlap">
+    <animated.div style={fadeInProps} className="landing-page">
+     <div  className="div">
+        <div className="overlap" >
           <div className="text-wrapper">WARONGWAREM</div>
           <div className="your-bookings">YOUR BOOKINGS</div>
           <div className="group">
@@ -90,8 +98,8 @@ const ReservationPage = () => {
           </div>
         </div>
         <img className="img3" alt="page3.jpg" src="page3.jpg" />
-      </div>
-    </div>
+        </div>
+      </animated.div>
   );
 };
 
