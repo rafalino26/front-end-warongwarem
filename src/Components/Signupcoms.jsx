@@ -78,7 +78,7 @@ export const SignupPage = () => {
   };
 
   const handleOkButtonClick = () => {
-    navigate('/Verification');
+    navigate('/SignIn');
     setShowSuccessPopup(false);
   };
 
