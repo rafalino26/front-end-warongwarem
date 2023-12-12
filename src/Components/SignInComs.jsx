@@ -15,13 +15,30 @@ export const Signin = () => {
     setPassword(e.target.value);
   };
 
-  const handleSignIn = () => {
-    // Your sign-in logic goes here
+  const handleSignIn = async () => {
     if (email && password) {
-      // Perform sign-in actions
-      navigate('/CustomerDashboard');
-    }
-  };
+      try {
+        const response = await fetch('http://localhost:8000/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+  
+        if (response.ok) {
+          // Successful login - redirect or handle as needed
+          navigate('/CustomerDashboard');
+        } else {
+          // Handle login failure (e.g., show error message)
+          console.error('Login failed');
+        }
+      } catch (error) {
+        // Handle network errors or other issues
+        console.error('Error:', error);
+      }
+    }
+  };
 
   return (
     <div className="signup-page">
