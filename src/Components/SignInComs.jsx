@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
 
 export const Signin = () => {
   const navigate = useNavigate();
@@ -15,6 +16,12 @@ export const Signin = () => {
     setPassword(e.target.value);
   };
 
+  const fadeInProps = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 1000 },
+  });
+
   const handleSignIn = async () => {
     if (email && password) {
       try {
@@ -25,7 +32,7 @@ export const Signin = () => {
           },
           body: JSON.stringify({ email, password }),
         });
-  
+
         if (response.ok) {
           // Successful login - redirect or handle as needed
           navigate('/CustomerDashboard');
@@ -36,76 +43,83 @@ export const Signin = () => {
       } catch (error) {
         // Handle network errors or other issues
         console.error('Error:', error);
-      }
-    }
-  };
+      }
+    }
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault(); // Prevents the default form submission behavior
+    handleSignIn();
+  };
 
   return (
-    <div className="signup-page">
-      <div className="div">
-        <div className="overlap">
-          <div className="text-wrapper">WARONGWAREM</div>
-          <div className="group">
-            <div className="Lets-get-start-wrapper">
-              <p className="Lets-get-start">Sign In</p>
-            </div>
-            <div className="sign-in-inner">
-              <input
-                className="frame-input2"
-                placeholder="*required"
-                type="email"
-                value={email}
-                onChange={handleEmailChange}
-              />
-            </div>
-            <b className="email-address2">Email address</b>
-            <div className="password-wrapper2">
-              <b className="password2">Password</b>
-            </div>
-            <div className="password-input-wrapper">
-              <input
-                className="sign-in-child"
-                placeholder="*required"
-                type={showPassword ? "text" : "password"}
-                value={password}
-                onChange={handlePasswordChange}
-              />
-              <label>
+    <animated.div style={fadeInProps} className="signup-page">
+      <form onSubmit={handleFormSubmit}>
+        <div className="div">
+          <div className="overlap">
+            <div className="text-wrapper">WARONGWAREM</div>
+            <div className="group">
+              <div className="Lets-get-start-wrapper">
+                <p className="Lets-get-start">Sign In</p>
+              </div>
+              <div className="sign-in-inner">
                 <input
-                  type="checkbox"
-                  onChange={() => setShowPassword(!showPassword)}
+                  className="frame-input2"
+                  placeholder="*required"
+                  type="email"
+                  value={email}
+                  onChange={handleEmailChange}
                 />
-                Show Password
-              </label>
+              </div>
+              <b className="email-address2">Email address</b>
+              <div className="password-wrapper2">
+                <b className="password2">Password</b>
+              </div>
+              <div className="password-input-wrapper">
+                <input
+                  className="sign-in-child"
+                  placeholder="*required"
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onChange={handlePasswordChange}
+                />
+                <label>
+                  <input
+                    type="checkbox"
+                    onChange={() => setShowPassword(!showPassword)}
+                  />
+                  Show Password
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="sign-in-container"
+                disabled={!email || !password}
+              >
+                <b className="sign-in2">sign in</b>
+              </button>
+              <div className="group-2">
+                <div className="overlap-group">
+                  <img className="line" alt="marker.png" src="marker.png" />
+                  <button onClick={() => navigate('/')} className="text-wrapper-2">Home</button>
+                </div>
+                <div>
+                  <button onClick={() => navigate('/Signup')} className="text-wrapper-3">Login</button>
+                </div>
+                <div>
+                  <button onClick={() => navigate('/AboutUs')} className="text-wrapper-4">About Us</button>
+                </div>
+              </div>
+              <div className="donthaveaccount">don't have an account?</div>
+              <button onClick={() => navigate('/SignUp')} className="sign-up1" target="_blank">
+                sign up
+              </button>
             </div>
-            <button
-              onClick={handleSignIn}
-              className="sign-in-container"
-              disabled={!email || !password}
-            >
-              <b className="sign-in2">sign in</b>
-            </button>
-            <div className="group-2">
-              <div className="overlap-group">
-                <img className="line" alt="marker.png" src="marker.png" />
-                <button onClick={() => navigate('/')} className="text-wrapper-2">Home</button>
-              </div>
-              <div>
-                <button onClick={() => navigate('/Signup')} className="text-wrapper-3">Login</button>
-              </div>
-              <div>
-                <button onClick={() => navigate('/AboutUs')} className="text-wrapper-4">About Us</button>
-              </div>
-            </div>
-            <div className="donthaveaccount">don't have an account?</div>
-            <button onClick={() => navigate('/SignUp')} className="sign-up1" target="_blank">
-              sign up
-            </button>
           </div>
+          <img className="img6" alt="page6.jpg" src="page6.jpg" />
         </div>
-        <img className="img6" alt="page6.jpg" src="page6.jpg" />
-      </div>
-    </div>
+      </form>
+    </animated.div>
   );
 };
 

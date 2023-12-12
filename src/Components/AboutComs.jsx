@@ -1,10 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
 
 export const AboutUsPage = () => {
   const navigate =  useNavigate()
+
+  const fadeInProps = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 1000 }, // Adjust duration for a longer fade-in (in milliseconds)
+  });
+  
+
   return (
-    <div className="landing-page">
+     <animated.div style={fadeInProps} className="landing-page">
       <div className="div">
         <div className="overlap">
           <div className="text-wrapper">WARONGWAREM</div>
@@ -61,7 +70,7 @@ export const AboutUsPage = () => {
         </div>
         <img className="img2" alt="page2.jpg" src="page2.jpg" />
       </div>
-    </div>
+      </animated.div>
   );
 };
 
