@@ -35,7 +35,7 @@ export const Signin = () => {
   
         // Store the token and role in localStorage
         localStorage.setItem('jwtToken', token);
-        localStorage.setItem('userRole', role);
+        localStorage.setItem('role', role);
   
         // Redirect based on the user's role
         switch (role) {
