@@ -30,20 +30,34 @@ export const Signin = () => {
           email,
           password,
         });
-
-        const { token } = response.data;
-
-        // Store the token in localStorage
+  
+        const { token, role } = response.data;
+  
+        // Store the token and role in localStorage
         localStorage.setItem('jwtToken', token);
-
-        // Redirect or perform other actions upon successful login
-        navigate('/CustomerDashboard');
+        localStorage.setItem('userRole', role);
+  
+        // Redirect based on the user's role
+        switch (role) {
+          case 'customer':
+            navigate('/CustomerDashboard');
+            break;
+          case 'waiter':
+            navigate('/WaitersDb');
+            break;
+          case 'manager':
+            navigate('//Managers');
+            break;
+          default:
+            console.error('Unknown role');
+        }
       } catch (error) {
         // Handle login failure (e.g., show error message)
         console.error('Login failed');
       }
     }
   };
+  
 
   const handleFormSubmit = (e) => {
     e.preventDefault(); // Prevents the default form submission behavior
