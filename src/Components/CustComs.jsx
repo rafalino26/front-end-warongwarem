@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import { useSpring, animated } from "react-spring";
 
 const instance = axios.create({
   headers: {
@@ -22,7 +21,6 @@ const CustDashboardPage = () => {
   const [tableType, setTableType] = useState("regular");
   const [errorMessage, setErrorMessage] = useState("");
   const [isFullRent, setIsFullRent] = useState(false);
-  
 
   const handlePersonsChange = (e) => {
     const inputPersons = e.target.value;
@@ -34,12 +32,6 @@ const CustDashboardPage = () => {
       setPersonsError("");
     }
   };
-
-  const fadeInProps = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { duration: 1000 }, // Adjust duration for a longer fade-in (in milliseconds)
-  });
 
   const handleDateChange = (e) => {
     setDate(e.target.value);
@@ -103,7 +95,7 @@ const CustDashboardPage = () => {
   
     try {
       const response = await instance.post(
-        '/api/reservations',
+        'http://localhost:8000/api/createReservation',
         {
           number_of_people: persons,
           type: tableType.toLowerCase(),
@@ -112,7 +104,7 @@ const CustDashboardPage = () => {
         },
         {
           headers: {
-            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
           },
         }
       );
@@ -139,7 +131,7 @@ const CustDashboardPage = () => {
   };
 
   return (
-    <animated.div style={fadeInProps} className="landing-page">
+    <div className="landing-page">
       <div className="div">
         <div className="overlap">
           <div className="text-wrapper">WARONGWAREM</div>
@@ -166,11 +158,8 @@ const CustDashboardPage = () => {
               </div>
             </div>
           </div>
-          <div className="Cust-home">
-          
-Okayy, now it's reservation time!!!
-Do not hesitate, do not be anxious, because we are the best ✨🍷
-</div>
+          <div className="Cust-home">Okayy, now it's reservation time!!!
+Do not hesitate, do not be anxious, because we are the best ✨🍷</div>
         </div>
         <img className="img1" alt="page1.jpg" src="page1.jpg" />
         <div className="person-inner">
@@ -237,7 +226,7 @@ Do not hesitate, do not be anxious, because we are the best ✨🍷
           <button onClick={handleOkButtonClick}>OK</button>
         </div>
       )}
-    </animated.div>
+    </div>
   );
 };
 

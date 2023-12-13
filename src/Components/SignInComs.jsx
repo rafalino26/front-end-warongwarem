@@ -34,7 +34,7 @@ export const Signin = () => {
         const { token } = response.data;
 
         // Store the token in localStorage
-        localStorage.setItem('token', token);
+        localStorage.setItem('jwtToken', token);
 
         // Redirect or perform other actions upon successful login
         navigate('/CustomerDashboard');

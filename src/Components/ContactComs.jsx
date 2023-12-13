@@ -11,12 +11,13 @@ export const ContactUsPage = () => {
     from: { opacity: 0 },
     config: { duration: 1000 }, // Adjust duration for a longer fade-in (in milliseconds)
   });
+
   
   return (
     <animated.div style={fadeInProps} className="landing-page">
       <div className="div">
         <div className="overlap">
-          <div className="text-wrapper">WARONGWAREM</div>
+        <animated.div style={fadeInProps} className="text-wrapper">WARONGWAREM</animated.div>
           <div className="group">
           <div className="C1-wrapper">
               <p className="C1">

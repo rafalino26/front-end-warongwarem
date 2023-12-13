@@ -11,6 +11,9 @@ import Verification from './Pages/Verification'
 import SignupMW from './Pages/SignupMW'
 import Reservation from './Pages/Reservation'
 import Managers from './Pages/Managers'
+import WaitersDb from './Pages/WaitersDb'
+import WaitersTable from './Pages/WaitersTable'
+import ManagersTableComs from './Components/managerstablecoms'
 
 
 const App = () => {
@@ -27,6 +30,9 @@ const App = () => {
         <Route path='/Verification' element={<Verification/>} />
         <Route path='/SignupMW' element={<SignupMW/>} />
         <Route path='/Managers' element={<Managers/>} />
+        <Route path='/ManagersTable' element={<ManagersTableComs/>} />
+        <Route path='/WaitersDb' element={<WaitersDb/>} />
+        <Route path='/WaitersTable' element={<WaitersTable/>} />
       </Routes>
     </Router>
    )

@@ -1470,7 +1470,7 @@ label {
 }
 
 .waiter-window {
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   height: 946px;
   position: relative;
   width: 1250px;
@@ -1554,7 +1554,12 @@ label {
   background-color: #ffffff;
   border: 1px solid;
   border-color: transparent;
-  border-image: linear-gradient(to bottom, rgb(199.89, 199.89, 199.89), rgb(150.96, 150.96, 150.96)) 1;
+  border-image: linear-gradient(
+      to bottom,
+      rgb(199.89, 199.89, 199.89),
+      rgb(150.96, 150.96, 150.96)
+    )
+    1;
   border-radius: 3px;
   box-shadow: inset 0px 1px 2px #00000033;
   height: 14px;
@@ -1594,6 +1599,35 @@ label {
   margin-top: -1px;
   position: relative;
 }
+
+.waiter-window .text-wrapper-20 {
+  align-self: stretch;
+  color: #0f1419;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: 20px;
+  position: relative;
+  left: -55px;
+}
+
+.waiter-window .text-wrapper-41 {
+  align-self: stretch;
+  color: #0f1419;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: 20px;
+  position: relative;
+  left: 10px;
+}
+
 
 .waiter-window .div-wrapper {
   align-items: center;
@@ -1639,10 +1673,15 @@ label {
 }
 
 .waiter-window .checkbox-2 {
-  background-color: #f49b32;
+  background-color: #0b0b0a;
   border: 1px solid;
   border-color: transparent;
-  border-image: linear-gradient(to bottom, rgb(199.89, 199.89, 199.89), rgb(150.96, 150.96, 150.96)) 1;
+  border-image: linear-gradient(
+      to bottom,
+      rgb(199.89, 199.89, 199.89),
+      rgb(150.96, 150.96, 150.96)
+    )
+    1;
   border-radius: 3px;
   box-shadow: inset 0px 1px 2px #00000033;
   height: 14px;
@@ -1664,8 +1703,110 @@ label {
   line-height: 19px;
   margin-top: -1px;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   text-overflow: ellipsis;
+  top: 20px;
+  left: -20px;
+}
+
+.waiter-window .text-wrapper-43 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #333333;
+  display: -webkit-box;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 20px;
+  left: -7px;
+}
+
+.waiter-window .text-wrapper-23 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #333333;
+  display: -webkit-box;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 20px;
+  left: 20px;
+}
+
+.waiter-window .text-wrapper-26 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #333333;
+  display: -webkit-box;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 20px;
+  left: 27px;
+}
+
+.waiter-window .text-wrapper-30 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #333333;
+  display: -webkit-box;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 20px;
+  left: 0px;
+}
+
+.waiter-window .text-wrapper-40 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #333333;
+  display: -webkit-box;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 20px;
+  left: 0px;
 }
 
 .waiter-window .stable-table-cell-3 {
@@ -1697,10 +1838,29 @@ label {
   font-weight: 400;
   letter-spacing: 0;
   line-height: 19px;
-  margin-right: -71px;
-  margin-top: -1px;
+  left: -10px;
+  top: 18px;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  text-overflow: ellipsis;
+  width: 172px;
+}
+
+.waiter-window .text-wrapper-42 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #000000;
+  display: -webkit-box;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  left: 20px;
+  top: 20px;
+  overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   width: 172px;
 }
@@ -1720,14 +1880,14 @@ label {
   display: flex;
   gap: 10px;
   position: relative;
-  width: 141px;
+  width: 141px; 
 }
 
 .waiter-window .text-wrapper-4 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   align-self: stretch;
-  color: #ffdd67;
+  color: #141413;
   display: -webkit-box;
   font-family: "Segoe UI-Semibold", Helvetica;
   font-size: 13px;
@@ -2035,7 +2195,7 @@ label {
 }
 
 .waiter-window .assign-reserve-wrapper {
-  background-color: #6CC824;
+  background-color: #6cc824;
   border-radius: 4px;
   height: 40px;
   position: fixed;
@@ -2165,7 +2325,7 @@ label {
 }
 
 .waiter-window .span {
-  color: #ff9f0d;
+  color: #0c0c0c;
 }
 
 .waiter-window .text-wrapper-14 {
@@ -2181,7 +2341,7 @@ label {
 }
 
 .waiter-window .overlap-5 {
-  background-color: #f49b32;
+  background-color: #060605;
   border-radius: 4px;
   height: 40px;
   position: relative;
@@ -2292,7 +2452,7 @@ label {
   font-family: "Kanit-Bold", Helvetica;
   font-size: 32px;
   font-weight: 700;
-  left: 1140px;
+  left: 2000px;
   letter-spacing: 0;
   line-height: 32px;
   position: fixed;
@@ -2300,18 +2460,27 @@ label {
   white-space: nowrap;
 }
 
+
+
 .waiter-window .dateinputwaiter {
   background-color: #ffffff;
 }
 
+.waiter-window .notes{
+  top: 220px;
+  position: absolute;
+  left: 225px;
+  width:16px;
+  z-index: 2;
+}
+
 .waiter-window .logoutwaiter-btn {
-  background-color: #ffffff;
-  top: 280px;
-  position: fixed;
-  left: 15px;
+  background-color: #ff0000;
+  top: 50px;
+  position: absolute;
+  left: 1150px;
   width: 68px;
   height: 50px;
- 
 }
 
 .waiter-window .Logoutwaiter {
@@ -2322,18 +2491,63 @@ label {
   top: 10px;
 }
 
+.notes-popup {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.notes-popup input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.notes-popup button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .waiter-window .tablewaiter-btn {
-  background-color: #ffffff;
-  top: 200px;
-  position: fixed;
-  left: 15px;
+  background-color: #ff0000;
+  top: 50px;
+  position: relative;
+  left: 1000px;
 }
 
 .waiter-window .mainwaiter-btn {
-  background-color: #5e5e5e;
-  top: 130px;
-  position: fixed;
-  left: 15px;
+  background-color: #ff0000;
+  top: 50px;
+  position: relative;
+  left: 800px;
+}
+
+.waiter-window .accept-btn {
+  background-color: #ff0000;
+  top: 210px;
+  position: relative;
+  left: 800px;
+  z-index: 2;
+}
+
+.waiter-window .rejection-btn {
+  background-color: #ff0000;
+  top: 210px;
+  position: relative;
+  left: 820px;
+  z-index: 2;
 }
 
 .waiter-window .tablewaiter-btn2 {

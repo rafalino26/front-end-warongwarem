@@ -3,7 +3,7 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
-const ManagersComs = () => {
+const WaiterComs = () => {
   const navigate = useNavigate();
   const [showNotesPopup, setShowNotesPopup] = useState(false);
   const [notes, setNotes] = useState('');
@@ -26,10 +26,10 @@ const ManagersComs = () => {
       <button onClick={handleNotesClick}>
         <img className="notes" alt="notes.png" src="notes.png" />
       </button>
-      <button className="tablewaiter-btn" onClick={() => navigate("/ManagersTable")}>
+      <button className="tablewaiter-btn" onClick={() => navigate("/WaitersTable")}>
         <img className="Tablewaiter" alt="Table" src="icsharptablerestaurant.svg" />
       </button>
-      <button className="mainwaiter-btn" onClick={() => navigate("/Managers")}>
+      <button className="mainwaiter-btn" onClick={() => navigate("/WaitersDb")}>
         <img className="Mainwaiter" alt="Main" src="group.svg" />
       </button>
       <button className="accept-btn">
@@ -113,10 +113,10 @@ const ManagersComs = () => {
       <div className="rectangle-3" />
       <p className="warong-warem">
         <span className="span">Warong</span>
-        <span className="text-wrapper-14">Warem Managers</span>
+        <span className="text-wrapper-14">Warem Waiter</span>
       </p>
     </div>
   );
 };
 
-export default ManagersComs;
+export default WaiterComs;
