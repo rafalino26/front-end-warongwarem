@@ -1,9 +1,9 @@
 import ManagersTableComs from "../Components/managerstablecoms"
 
-const Home = () => {
+const ManagersTable = () => {
     return(
         <ManagersTableComs />
     )
 }
 
-export default Home
+export default ManagersTable

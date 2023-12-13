@@ -13,7 +13,7 @@ import Reservation from './Pages/Reservation'
 import Managers from './Pages/Managers'
 import WaitersDb from './Pages/WaitersDb'
 import WaitersTable from './Pages/WaitersTable'
-import ManagersTableComs from './Components/managerstablecoms'
+import ManagersTable from './Pages/ManagersTable'
 
 
 const App = () => {
@@ -30,7 +30,7 @@ const App = () => {
         <Route path='/Verification' element={<Verification/>} />
         <Route path='/SignupMW' element={<SignupMW/>} />
         <Route path='/Managers' element={<Managers/>} />
-        <Route path='/ManagersTable' element={<ManagersTableComs/>} />
+        <Route path='/ManagersTable' element={<ManagersTable/>} />
         <Route path='/WaitersDb' element={<WaitersDb/>} />
         <Route path='/WaitersTable' element={<WaitersTable/>} />
       </Routes>

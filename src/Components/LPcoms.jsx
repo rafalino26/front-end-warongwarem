@@ -30,7 +30,7 @@ export const LandingPage = () => {
                 <button className="text-wrapper-2">Home</button>
               </div>
               <div>
-              <button onClick={() => navigate('/Signup')}className="text-wrapper-3">Login</button>
+              <button onClick={() => navigate('/Signup')}className="text-wrapper-3">Register</button>
               </div>
               <div>
               <button onClick={() => navigate('/AboutUs')}className="text-wrapper-4">About Us </button>

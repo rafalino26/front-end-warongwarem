@@ -46,7 +46,7 @@ export const Signin = () => {
             navigate('/WaitersDb');
             break;
           case 'manager':
-            navigate('//Managers');
+            navigate('/Managers');
             break;
           default:
             console.error('Unknown role');

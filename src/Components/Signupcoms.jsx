@@ -165,14 +165,14 @@ export const SignupPage = () => {
               </button>
               <div className="group-2">
                 <div className="overlap-group">
-                  <img className="line" alt="marker.png" src="marker.png" />
+                  <img className="line20" alt="marker.png" src="marker.png" />
                   <button onClick={() => navigate('/')} className="text-wrapper-2">
                     Home
                   </button>
                 </div>
                 <div>
                   <button onClick={() => navigate('/Signup')} className="text-wrapper-3">
-                    Login
+                    Register
                   </button>
                 </div>
                 <div>
