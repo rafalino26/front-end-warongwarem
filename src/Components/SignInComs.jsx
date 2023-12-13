@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
+import axios from 'axios';
 
 export const Signin = () => {
   const navigate = useNavigate();
@@ -25,24 +26,21 @@ export const Signin = () => {
   const handleSignIn = async () => {
     if (email && password) {
       try {
-        const response = await fetch('http://localhost:8000/api/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, password }),
+        const response = await axios.post('http://localhost:8000/api/login', {
+          email,
+          password,
         });
 
-        if (response.ok) {
-          // Successful login - redirect or handle as needed
-          navigate('/CustomerDashboard');
-        } else {
-          // Handle login failure (e.g., show error message)
-          console.error('Login failed');
-        }
+        const { token } = response.data;
+
+        // Store the token in localStorage
+        localStorage.setItem('token', token);
+
+        // Redirect or perform other actions upon successful login
+        navigate('/CustomerDashboard');
       } catch (error) {
-        // Handle network errors or other issues
-        console.error('Error:', error);
+        // Handle login failure (e.g., show error message)
+        console.error('Login failed');
       }
     }
   };

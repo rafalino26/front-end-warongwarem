@@ -10,6 +10,7 @@ import CustComs from './Pages/CustomerDashboard'
 import Verification from './Pages/Verification'
 import SignupMW from './Pages/SignupMW'
 import Reservation from './Pages/Reservation'
+import Managers from './Pages/Managers'
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route path='/Reservation' element={<Reservation/>} />
         <Route path='/Verification' element={<Verification/>} />
         <Route path='/SignupMW' element={<SignupMW/>} />
+        <Route path='/Managers' element={<Managers/>} />
       </Routes>
     </Router>
    )
