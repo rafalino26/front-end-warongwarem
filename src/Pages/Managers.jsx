@@ -6,4 +6,4 @@ const Managers = () => {
     )
 }
 
-export default Managers
+export default Managers                                
