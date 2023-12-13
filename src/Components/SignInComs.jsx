@@ -35,7 +35,7 @@ export const Signin = () => {
   
         // Store the token and role in localStorage
         localStorage.setItem('jwtToken', token);
-        localStorage.setItem('userRole', role);
+        localStorage.setItem('role', role);
   
         // Redirect based on the user's role
         switch (role) {
@@ -46,7 +46,7 @@ export const Signin = () => {
             navigate('/WaitersDb');
             break;
           case 'manager':
-            navigate('//Managers');
+            navigate('/ManagersTable  ');
             break;
           default:
             console.error('Unknown role');
