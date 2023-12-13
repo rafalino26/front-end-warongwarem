@@ -7,6 +7,8 @@ const ManagersComs = () => {
   const navigate = useNavigate();
   const [showNotesPopup, setShowNotesPopup] = useState(false);
   const [notes, setNotes] = useState('');
+  const [editedTime, setEditedTime] = useState('');
+  const [editedDate, setEditedDate] = useState('');
 
   const handleNotesClick = () => {
     setShowNotesPopup(true);
@@ -17,26 +19,34 @@ const ManagersComs = () => {
     setShowNotesPopup(false);
   }
 
+  const handleTimeChange = (newTime) => {
+    setEditedTime(newTime);
+  }
+
+  const handleDateChange = (newDate) => {
+    setEditedDate(newDate);
+  }
+
   return (
     <div className="waiter-window">
       <div className="overlap"></div>
       <button className="logoutwaiter-btn" onClick={() => navigate("/")}>
-      <div className="navbar3">Logout</div>
+        <div className="navbar3">Logout</div>
       </button>
       <button onClick={handleNotesClick}>
         <img className="notes" alt="notes.png" src="notes.png" />
       </button>
       <button className="tablewaiter-btn" onClick={() => navigate("/ManagersTable")}>
-      <div className="navbar2">Table</div>
+        <div className="navbar2">Table</div>
       </button>
       <button className="mainwaiter-btn" onClick={() => navigate("/Managers")}>
-      <div className="navbar1">Dasboard</div>
+        <div className="navbar1">Dasboard</div>
       </button>
       <button className="accept-btn">
-      <div className="Acceptwaiter">Accept</div>
+        <div className="Acceptwaiter">Accept</div>
       </button>
       <button className="rejection-btn">
-      <div className="rejectionwaiter">Reject</div>
+        <div className="rejectionwaiter">Reject</div>
       </button>
       <div className="overlap-group">
         <div className="stable-table-row">
@@ -75,16 +85,32 @@ const ManagersComs = () => {
               <div className="text-wrapper-20">cindy21@gmail.com</div>
             </div>
             <div className="stable-table-cell-4">
-              <div className="text-wrapper-3">01:00 PM</div>
+              <div className="text-wrapper-3">
+                {editedTime ? editedTime : "01:00 PM"}
+                <img
+                  className="icontime"
+                  alt="time1.png"
+                  src="time1.png"
+                  onClick={() => handleTimeChange("02:00 PM")}
+                />
+              </div>
             </div>
             <div className="stable-table-cell-5">
-              <div className="text-wrapper-2">01/12/2023</div>
+              <div className="text-wrapper-2">
+                {editedDate ? editedDate : "01/12/2023"}
+                <img
+                  className="iconcalendar1"
+                  alt="calendar1.png"
+                  src="calendar1.png"
+                  onClick={() => handleDateChange("01/13/2023")}
+                />
+              </div>
             </div>
             <div className="stable-table-cell-5">
               <div className="text-wrapper-23">2</div>
             </div>
             <div className="stable-table-cell-6">
-              <div className="text-wrapper-26">Indoor</div>
+              <div className="text-wrapper-26">Full Rent</div>
             </div>
             <div className="stable-table-cell-2">
               <div className="group">

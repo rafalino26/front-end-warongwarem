@@ -590,6 +590,17 @@
   width: 65px;
 }
 
+.icontime{
+  width: 20px;
+  top: 0px;
+  position: absolute;
+}
+
+.iconcalendar1{
+  width: 20px;
+  position: relative;
+}
+
 .signup-page .line {
   height: 1px;
   left: 234px;
