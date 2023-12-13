@@ -21,22 +21,22 @@ const ManagersComs = () => {
     <div className="waiter-window">
       <div className="overlap"></div>
       <button className="logoutwaiter-btn" onClick={() => navigate("/")}>
-        <img className="Logoutwaiter" alt="Power Off" src="/poweroff-1@2x.png" />
+      <div className="navbar3">Logout</div>
       </button>
       <button onClick={handleNotesClick}>
         <img className="notes" alt="notes.png" src="notes.png" />
       </button>
       <button className="tablewaiter-btn" onClick={() => navigate("/ManagersTable")}>
-        <img className="Tablewaiter" alt="Table" src="icsharptablerestaurant.svg" />
+      <div className="navbar2">Table</div>
       </button>
       <button className="mainwaiter-btn" onClick={() => navigate("/Managers")}>
-        <img className="Mainwaiter" alt="Main" src="group.svg" />
+      <div className="navbar1">Dasboard</div>
       </button>
       <button className="accept-btn">
-        <img className="Acceptwaiter" alt="Accept" src="group.svg" />
+      <div className="Acceptwaiter">Accept</div>
       </button>
       <button className="rejection-btn">
-        <img className="rejectionwaiter" alt="reject" src="group.svg" />
+      <div className="rejectionwaiter">Reject</div>
       </button>
       <div className="overlap-group">
         <div className="stable-table-row">

@@ -7,13 +7,13 @@ const WaiterstableComs = () => {
     <div className="waiter-window">
       <div className="overlap"></div>
       <button class="logoutwaiter-btn" onClick={() => navigate("/")}>
-        <img class="Logoutwaiter" alt="Power Off" src="/poweroff-1@2x.png" />
+      <div className="navbar3">Logout</div>
       </button>
       <button class="tablewaiter-btn" onClick={() => navigate("/wt")}>
-        <img class="Tablewaiter" alt="Table" src="icsharptablerestaurant.svg" />
+      <div className="navbar2">Table</div>
       </button>
       <button class="mainwaiter-btn" onClick={() => navigate("/WaitersDb")}>
-        <img class="Mainwaiter" alt="Main" src="group.svg" />
+      <div className="navbar1">Dasboard</div>
       </button>
       <div className="overlap-group">
         <div className="stable-table-row">

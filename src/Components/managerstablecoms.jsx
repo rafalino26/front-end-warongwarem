@@ -7,13 +7,13 @@ const ManagersTableComs = () => {
     <div className="waiter-window">
       <div className="overlap"></div>
       <button class="logoutwaiter-btn" onClick={() => navigate("/")}>
-        <img class="Logoutwaiter" alt="Power Off" src="/poweroff-1@2x.png" />
+      <div className="navbar3">Logout</div>
       </button>
-      <button class="tablewaiter-btn" onClick={() => navigate("/wt")}>
-        <img class="Tablewaiter" alt="Table" src="icsharptablerestaurant.svg" />
+      <button class="tablewaiter-btn" onClick={() => navigate("/ManagersTable")}>
+      <div className="navbar2">Table</div>
       </button>
-      <button class="mainwaiter-btn" onClick={() => navigate("/WaitersDb")}>
-        <img class="Mainwaiter" alt="Main" src="group.svg" />
+      <button class="mainwaiter-btn" onClick={() => navigate("/Managers")}>
+      <div className="navbar1">Dasboard</div>
       </button>
       <div className="overlap-group">
         <div className="stable-table-row">
@@ -65,7 +65,7 @@ const ManagersTableComs = () => {
       <div className="rectangle-3" />
       <p className="warong-warem">
         <span className="span">Warong</span>
-        <span className="text-wrapper-14">Warem Waiter</span>
+        <span className="text-wrapper-14">Warem Managers</span>
       </p>
 
     </div>
