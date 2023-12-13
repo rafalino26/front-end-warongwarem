@@ -22,6 +22,7 @@ const CustDashboardPage = () => {
   const [tableType, setTableType] = useState("regular");
   const [errorMessage, setErrorMessage] = useState("");
   const [isFullRent, setIsFullRent] = useState(false);
+  
 
   const handlePersonsChange = (e) => {
     const inputPersons = e.target.value;
@@ -165,7 +166,11 @@ const CustDashboardPage = () => {
               </div>
             </div>
           </div>
-          <div className="Cust-home">It's reservation time!</div>
+          <div className="Cust-home">
+          
+Okayy, now it's reservation time!!!
+Do not hesitate, do not be anxious, because we are the best ✨🍷
+</div>
         </div>
         <img className="img1" alt="page1.jpg" src="page1.jpg" />
         <div className="person-inner">
