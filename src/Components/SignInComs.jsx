@@ -26,7 +26,7 @@ export const Signin = () => {
   const handleSignIn = async () => {
     if (email && password) {
       try {
-        const response = await axios.post('http://localhost:8000/api/login', {
+        const response = await axios.post('https://wwbe.my.id/api/login', {
           email,
           password,
         });

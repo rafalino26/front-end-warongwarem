@@ -68,7 +68,7 @@ export const SignupPage = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:8000/api/register', {
+      const response = await axios.post('https://wwbe.my.id/api/register', {
         name,
         email,
         password,
