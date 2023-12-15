@@ -95,7 +95,7 @@ const CustDashboardPage = () => {
   
     try {
       const response = await instance.post(
-        'http://localhost:8000/api/createReservation',
+        'https://wwbe.my.id/login/api/createReservation',
         {
           number_of_people: persons,
           type: tableType.toLowerCase(),
